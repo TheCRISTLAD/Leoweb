@@ -36,3 +36,9 @@ input[type="submit"]:hover{
     background: #4A88F4;
     cursor: pointer;
 }
+footer{
+    font-size: 20px;
+    background: black;
+    color: #fff;
+    text-align: center;
+}
