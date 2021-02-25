@@ -37,12 +37,6 @@ input[type="submit"]:hover{
     background: #4A88F4;
     cursor: pointer;
 }
-footer{
-    font-size: 20px;
-    background: black;
-    color: #fff;
-    text-align: center;
-}
 .card{
     width: 100%;
     margin: 20px;
@@ -57,22 +51,48 @@ footer{
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
     transform: translateY(-3%);
 }
-.menu{
-    width: 100%;
-    background: #000;
+body{
+    background: #e6e6e6;
+}
+header, .main, footer{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+header nav{
+    background: #528FD5;
+    overflow: hidden;
+}
+header nav ul{
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
-.menu li{
-    display: inline-block;
+header ul li{
+    float: left;
 }
-.menu li a{
+header nav ul li a{
     padding: 10px 20px;
-    display: inline-block;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+header nav ul li a:hover{
+    background: #75ACEC;
+    text-decoration: none;
     color: #fff;
 }
-.menu li a:hover{
-    background: #ccc;
-    color: #000;
+.main articles{
+    width: 70%;
+    float: left;
+   
+}
+.main .articles article{
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+}
+footer{
+    background: #000;
+    color: #fff;
+    padding: 10px 0px;
+    text-align: center;
 }
