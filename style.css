@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: Ubuntu;
+    font-family:sans-serif;
 }
 
 form{
@@ -42,4 +42,18 @@ footer{
     background: black;
     color: #fff;
     text-align: center;
+}
+.card{
+    width: 100%;
+    margin: 20px;
+    display: inline-block;
+    transition: all 400ms ease;
+    cursor: default;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+}
+.card:hover{
+    background-color: #1175E7;
+    color: #fff;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
 }
