@@ -57,3 +57,22 @@ footer{
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
     transform: translateY(-3%);
 }
+.menu{
+    width: 100%;
+    background: #000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li{
+    display: inline-block;
+}
+.menu li a{
+    padding: 10px 20px;
+    display: inline-block;
+    color: #fff;
+}
+.menu li a:hover{
+    background: #ccc;
+    color: #000;
+}
