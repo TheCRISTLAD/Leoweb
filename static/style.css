@@ -1,0 +1,100 @@
+/*CSS de la pagina hecha por Cristian Montero*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+form{
+    width:25%;
+    border:1px solid #ccc;
+    margin: 20px;
+    padding: 20px;
+}
+label{
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+input{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+input:focus{
+    border:1px solid #1668C4;
+}
+
+input[type="submit"]{
+    margin-bottom: 0;
+    background: #1668C4;
+    color: #fff;
+    border: none;
+}
+input[type="submit"]:hover{
+    background: #4A88F4;
+    cursor: pointer;
+}
+.card{
+    width: 100%;
+    margin: 20px;
+    display: inline-block;
+    transition: all 400ms ease;
+    cursor: default;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+}
+.card:hover{
+    background-color: #1175E7;
+    color: #fff;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+body{
+    background: #e6e6e6;
+}
+header, .main, footer{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+header nav{
+    background: #528FD5;
+    overflow: hidden;
+}
+header nav ul{
+    list-style: none;
+}
+header ul li{
+    float: left;
+}
+header nav ul li a{
+    padding: 10px 20px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+header nav ul li a:hover{
+    background: #75ACEC;
+    text-decoration: none;
+    color: #fff;
+}
+.main articles{
+    width: 70%;
+    float: left;
+   
+}
+.main .articles article{
+    padding: 20px;
+    cursor: default;
+    margin-bottom: 20px;
+    background: #fff;
+}
+footer{
+    background: #000;
+    color: #fff;
+    padding: 10px 0px;
+    text-align: center;
+}
