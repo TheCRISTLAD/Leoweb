@@ -1,2 +1,3 @@
-a = 5
-print(a)
+from flask import Flask
+
+app = Flask(__name__)
