@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="C:\Users\crist\Documents\GitHub\Leoweb\login_css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\crist\Documents\GitHub\Leoweb\static\static\login_css.css">
+    <title>Inicie Sesion</title>
+   <!-- Links de bootstrap 4 -->
+  
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  
+   <!-- Fin -->
+   <link rel="stylesheet" href="login_css.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body id="particles-js">
+
+    <!--Login de la pagina-->
+            <div class="container h-100">
+                <div class="d-flex justify-content-center h-100">
+                    <div class="user_card">
+                        <div class="d-flex justify-content-center">
+                            <div class="brand_logo_container">
+                                <img src="https://cdn.pixabay.com/photo/2018/05/04/15/49/cyber-security-3374252_960_720.jpg" class="brand_logo" alt="Logo">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center form_container">
+                            <form action="login" method="POST" onsubmit="return validateLogin(this)">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="text" name="" class="form-control input_user" value="" placeholder="Correo">
+                                </div>
+                                <div class="input-group mb-2">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                    <input type="password" name="" class="form-control input_pass" value="" placeholder="Contraseña">
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                        <label class="custom-control-label" for="customControlInline">Recúerdame</label>
+                                    </div>
+                                </div>
+                                    <div class="d-flex justify-content-center mt-3 login_container">
+                                        <input type="button" name="login_submit" class="btn login_btn"  value="Iniciar">
+                                 
+                                 </div>
+                            </form>
+                        </div>
+                
+                        <div class="mt-4">
+                            <div class="d-flex justify-content-center links">
+                               ¿No tienes una cuenta? <a href="#" class="ml-2">Create una cuenta</a>
+                            </div>
+                            <div class="d-flex justify-content-center links">
+                                <a href="#">¿Olvidaste tu contraseña?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>
