@@ -1,4 +1,4 @@
-from flask import Flask, request, url_for
+from flask import Flask, request, url_for, render_template
 
 app = Flask(__name__)
 
@@ -9,6 +9,10 @@ def index():
 
 @app.route('/Login', methods=['GET', 'POST'])
 def Login():
+    """
+    It process the login.html
+    :return: basci html
+    """
     if request.method == 'POST':
         missing = []
         fields = ['email', 'pswd', 'login']
@@ -17,10 +21,10 @@ def Login():
         if value is None:
             misssing.append(field)
         if missing:
-            return render_template('MissingFields.html',next = url_for('Login.html'))
+            return render_template('MissingFields.html',next = url_for('login.html'))
             return load_user(request.form['email'], request.form['pswd'])
 
-    return app.send_static_file('Login.html')
+    return app.send_static_file('login.html')
 
 
 @app.route('/processlogin', methods=['POST'])
@@ -40,7 +44,7 @@ def process_login():
 @app.route('/registro', methods=['GET','POST'])
 
 def registro(): 
-    return app.send_static_file('registro.html')
+    return app.send_static_file('register.html')
 
 
 #Fin de rutas
