@@ -1,4 +1,5 @@
 from flask import Flask, request, url_for, render_template
+from flask import json
 
 app = Flask(__name__)
 
@@ -47,7 +48,23 @@ def registro():
     return app.send_static_file('register.html')
 
 
-#Fin de rutas
+def process_error(message,next_page):
+    """
+    :param message:
+    :param next_page:
+    :return:
+    """
+ return render_template("error.html", error_message=message,next=next_page)
+
+datos = {
+    "nickname": "Jaime",
+    "password": "1234",
+    "messages": [],
+    "email": session['email'],
+    "friends": session['friends']
+}
+with open('nombre_fichero.json', 'r') as f:
+    data = json.load(f)
 
 if __name__ == '__main__':  
     app.run(debug = True, port = 80)
