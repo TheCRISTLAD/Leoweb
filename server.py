@@ -1,5 +1,8 @@
 from flask import Flask, request, url_for, render_template
 from flask import json
+from flask import session
+from flask import datetime
+from flask import os
 
 app = Flask(__name__)
 
@@ -56,8 +59,19 @@ def process_error(message,next_page):
     """
  return render_template("error.html", error_message=message,next=next_page)
 
+def load_user(email, password):
+    """
+    """
+    file_path = os.path.json(SITE_ROOT, "data/", email)
+    if not os.path.isfile(file_path):
+        return process_error("User not found / Usuario no encontrado", url_for("login.html"))
+    with open(file_path, 'r') as f:
+        data = json.load(f)
+    if data['password'] != password:
+        return process_error("Incorrect password / Constraseña Incorrecta", url_for("login.html")) 
+
 datos = {
-    "nickname": "Jaime",
+    "user_name": "Jaime",
     "password": "1234",
     "messages": [],
     "email": session['email'],
