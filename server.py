@@ -127,14 +127,12 @@ def load_user(email, password):
 
 def save_current_user():
     datos = {
-    "user_name": "Jaime",
-    "password": "1234",
-    "messages": session['messages'],
-    "email": session['email'],
-    "friends": session['friends']
+        "user_name": session['user_name'],
+        "password": session['password'],
+        "messages": session['messages'],
+        "email": session['email'],
+        "friends": session['friends']
 }
-
-
 files_path = os.path.json(SITE_ROOT,  "data/", session['email'])
 with open('nombre_fichero.json', 'w') as f:
     json.dump(datos, f)
@@ -151,11 +149,12 @@ def create_user_file(name, email, password, confirm_password):
         return process_error("El email ya ha sido utilizado, favor intentar nuevamente con otro email", url_for("register")
     if password != confirm_password:
         return process_error("Las contraseñas no coinciden", url_for("register.html")
-    datos={
+
+    datos = {
         "user_name": name,
         "password": password,
         "messages": [],
-        "friends": []
+        "friends": [],
     }
     with open(file_path, 'w') as f:
         json.dump(datos, f)
@@ -177,7 +176,7 @@ def load_messages_from_user():
 with open(file_path, 'r') as f:
  data=json.load(f)
 messages_with_author=[(data["user_name"], messages[0], messages[1], for message in data["messages"])]
-return messages_with_author
+ return messages_with_author
 
 
 def get_all_users(user):
